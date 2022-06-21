@@ -7,11 +7,11 @@ using namespace std;
 #define TO_RADIANS 3.14/180.0
 
 //  Anggota Kelompok X
-//  Nama (NIM)
-//  Nama (NIM)
-//  Nama (NIM)
-//  Nama (NIM)
-//  Nama (NIM)
+//  Georgio Nicky (672020267)
+//  Ezer Soleiman Junior Ranti (672020139)
+//  Aprillia Tetikay (672020021)
+//  Siska Angeline (672020123)
+//  Julita Veronika Lenda (672020266)
 
 const int width = 1280;
 const int height = 720;
