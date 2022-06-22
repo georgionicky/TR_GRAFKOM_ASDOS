@@ -65,6 +65,15 @@ void lantai1() {
 
 }
 
+void objek1(int x, int y, int z,int t, int l, int p) {
+    glBegin(GL_QUADS); //alas
+    glVertex3f(x,y,z);
+    glVertex3f(x,y,z + l);
+    glVertex3f(x + p, y, z + l);
+    glVertex3f(x + p, y, z);
+    glEnd();
+}
+
 void pagar_lantai1() {
 
 }
@@ -73,6 +82,10 @@ void draw() {
     // Mulai tuliskan isi pikiranmu disini
     lantai1();
     
+    objek1(0, 1000, 0, 0, 100, 100);
+    objek1(0, 1100, 0, 0, 200, 100);
+    objek1(0, 1200, 0, 0, 200, 200);
+
     glPushMatrix();
     glColor3f(1, 0, 0);
     glTranslatef(0,100,0);
