@@ -72,6 +72,46 @@ void objek1(int x, int y, int z,int t, int l, int p) {
     glVertex3f(x + p, y, z + l);
     glVertex3f(x + p, y, z);
     glEnd();
+
+    glBegin(GL_QUADS); //atas
+    glVertex3f(x, y + t, z);
+    glVertex3f(x, y + t, z + l);
+    glVertex3f(x + p, y + t, z + l);
+    glVertex3f(x + p, y + t, z);
+    glEnd();
+
+    glBegin(GL_QUADS); //kiri
+    glVertex3f(x, y, z);
+    glVertex3f(x, y + t, z);
+    glVertex3f(x, y + t, z + l);
+    glVertex3f(x, y, z + l);
+    glEnd();
+
+    glBegin(GL_QUADS); //kanan
+    glVertex3f(x + p, y, z);
+    glVertex3f(x + p, y + t, z);
+    glVertex3f(x + p, y + t, z + l);
+    glVertex3f(x + p, y, z + l);
+    glEnd();
+
+    glBegin(GL_QUADS); //blkng
+    glVertex3f(x, y, z);
+    glVertex3f(x, y + t, z);
+    glVertex3f(x + p, y + t, z);
+    glVertex3f(x + p, y, z);
+    glEnd();
+
+    glBegin(GL_QUADS); //depan
+    glVertex3f(x, y, z + l);
+    glVertex3f(x, y + t, z + l);
+    glVertex3f(x + p, y + t, z + l);
+    glVertex3f(x + p, y, z + l);
+    glEnd();
+
+
+
+
+    
 }
 
 void pagar_lantai1() {
@@ -82,9 +122,7 @@ void draw() {
     // Mulai tuliskan isi pikiranmu disini
     lantai1();
     
-    objek1(0, 1000, 0, 0, 100, 100);
-    objek1(0, 1100, 0, 0, 200, 100);
-    objek1(0, 1200, 0, 0, 200, 200);
+    objek1(0, 1100, 0, 1000, 100, 400);
 
     glPushMatrix();
     glColor3f(1, 0, 0);
