@@ -72,36 +72,8 @@ void pagar_lantai1() {
 void draw() {
     // Mulai tuliskan isi pikiranmu disini
     lantai1();
-    
-    glPushMatrix();
-    glColor3f(1, 0, 0);
-    glTranslatef(0,100,0);
-    glutSolidCube(200);
-    glEnd();
-    glPopMatrix();
 
     glPushMatrix();
-    glColor3f(1, 0, 0);
-    glTranslatef(0, 250, 0);
-    glutSolidCube(150);
-    glEnd();
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1, 1, 0);
-    glTranslatef(0, 350, 0);
-    glutSolidTeapot(50.0);
-    glEnd();
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(1, 1, 0);
-    glTranslatef(0, 750, 0);
-    glutSolidTorus(30.0, 100, 50, 20);
-    glEnd();
-    glPopMatrix();
-    
-    /*glPushMatrix();
     glColor3f(1, 0, 0);
     glTranslatef(0, 100, 0);
     glutSolidCube(200);
@@ -110,99 +82,20 @@ void draw() {
     glPushMatrix();
     glColor3f(1, 0, 0);
     glTranslatef(0, 250, 0);
-    glutSolidCube(15*///0);
-    //glPopMatrix();
-
-    //lantai 1
-
-   // depan-belakang
-    glPushMatrix();
-    glColor3f(1, 1, 1);
-    glBegin(GL_POLYGON);
-    glVertex3f(-100.0, -75.0, 100.0);
-    glVertex3f(-100.0, 75.0, 100.0);
-    glVertex3f(100.0, 75.0, 100.0);
-    glVertex3f(100.0, -75.0, 100.0);
-    glEnd();
+    glutSolidCube(150);
     glPopMatrix();
 
     glPushMatrix();
-    glColor3f(1, 1, 1);
-    glBegin(GL_POLYGON);
-    glVertex3f(-100.0, -75.0, -100.0);
-    glVertex3f(-100.0, 75.0, -100.0);
-    glVertex3f(100.0, 75.0, -100.0);
-    glVertex3f(100.0, -75.0, -100.0);
-    glEnd();
-    glPopMatrix();
-
-    //kiri- kanan
-    glPushMatrix();
-    glColor3f(1, 1, 1);
-    glBegin(GL_POLYGON);
-    glVertex3f(-100.0, 75.0, 100.0);
-    glVertex3f(-100.0, -75.0, 100.0);
-    glVertex3f(-100.0, -75.0, -100.0);
-    glVertex3f(-100.0, 75.0, -100.0);
-    glEnd();
-    glPopMatrix();
-   
-    glPushMatrix();
-    glColor3f(1, 1, 1);
-    glBegin(GL_POLYGON);
-    glVertex3f(100.0, 75.0, 100.0);
-    glVertex3f(100.0, -75.0, 100.0);
-    glVertex3f(100.0, -75.0, -100.0);
-    glVertex3f(100.0, 75.0, -100.0);
-    glEnd();
-    glPopMatrix();
-
-    //pintu depan-belakang
-    glPushMatrix();
-    glColor3f(1, 0, 0);
-    glBegin(GL_POLYGON);
-    glVertex3f(-10.0, -50.0, 100.0);
-    glVertex3f(-10.0, 50.0, 100.0);
-    glVertex3f(10.0, 50.0, 100.0);
-    glVertex3f(10.0, -50.0, 100.0);
-    glEnd();
+    glColor3f(1, 1, 0);
+    glTranslatef(0, 350, 0);
+    glutSolidTeapot(50.0);
     glPopMatrix();
 
     glPushMatrix();
-    glColor3f(1, 0, 0);
-    glBegin(GL_POLYGON);
-    glVertex3f(-10.0, -50.0, -100.0);
-    glVertex3f(-10.0, 50.0, -100.0);
-    glVertex3f(10.0, 50.0, -100.0);
-    glVertex3f(10.0, -50.0, -100.0);
-    glEnd();
+    glColor3f(1, 1, 0);
+    glTranslatef(0, 750, 0);
+    glutSolidTorus(30.0, 100, 50, 20);
     glPopMatrix();
-
-
-    //garis-garis depan-belakang kiri-kanan
-    glPushMatrix();
-    glColor3f(0, 1, 0.2);
-    glBegin(GL_QUADS);
-    glVertex3f(-100.0, -75.0, 100.0);
-    glVertex3f(-100.0, 75.0, 100.0);
-    glVertex3f(-90.0, 75.0, 100.0);
-    glVertex3f(-90.0, -75.0, 100.0);
-    glEnd();
-    glPopMatrix();
-
-    glPushMatrix();
-    glColor3f(0, 1, 0.2);
-    glBegin(GL_QUADS);
-    glVertex3f(-100.0 + 40.0, -75.0, 100.0);
-    glVertex3f(-100.0 + 40.0, 75.0, 100.0);
-    glVertex3f(-90.0 + 40.0, 75.0, 100.0);
-    glVertex3f(-90.0 + 40.0, -75.0, 100.0);
-    glEnd();
-    glPopMatrix();
-
-
-
-    
 
     ground();
     glFlush();
