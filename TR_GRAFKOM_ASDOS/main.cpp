@@ -108,10 +108,6 @@ void objek1(int x, int y, int z,int t, int l, int p) {
     glVertex3f(x + p, y, z + l);
     glEnd();
 
-
-
-
-    
 }
 
 void pagar_lantai1() {
