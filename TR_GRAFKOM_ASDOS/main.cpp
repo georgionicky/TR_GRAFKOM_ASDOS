@@ -73,6 +73,101 @@ void draw() {
     // Mulai tuliskan isi pikiranmu disini
     lantai1();
 
+    /*glPushMatrix();
+    glColor3f(1, 0, 0);
+    glTranslatef(0, 100, 0);
+    glutSolidCube(200);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 0, 0);
+    glTranslatef(0, 250, 0);
+    glutSolidCube(15*///0);
+    //glPopMatrix();
+
+    //lantai 1
+
+   // depan-belakang
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex3f(-100.0, -75.0, 100.0);
+    glVertex3f(-100.0, 75.0, 100.0);
+    glVertex3f(100.0, 75.0, 100.0);
+    glVertex3f(100.0, -75.0, 100.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex3f(-100.0, -75.0, -100.0);
+    glVertex3f(-100.0, 75.0, -100.0);
+    glVertex3f(100.0, 75.0, -100.0);
+    glVertex3f(100.0, -75.0, -100.0);
+    glPopMatrix();
+
+    //kiri- kanan
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex3f(-100.0, 75.0, 100.0);
+    glVertex3f(-100.0, -75.0, 100.0);
+    glVertex3f(-100.0, -75.0, -100.0);
+    glVertex3f(-100.0, 75.0, -100.0);
+    glPopMatrix();
+   
+    glPushMatrix();
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex3f(100.0, 75.0, 100.0);
+    glVertex3f(100.0, -75.0, 100.0);
+    glVertex3f(100.0, -75.0, -100.0);
+    glVertex3f(100.0, 75.0, -100.0);
+    glPopMatrix();
+
+    //pintu depan-belakang
+    glPushMatrix();
+    glColor3f(1, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex3f(-10.0, -50.0, 100.0);
+    glVertex3f(-10.0, 50.0, 100.0);
+    glVertex3f(10.0, 50.0, 100.0);
+    glVertex3f(10.0, -50.0, 100.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex3f(-10.0, -50.0, -100.0);
+    glVertex3f(-10.0, 50.0, -100.0);
+    glVertex3f(10.0, 50.0, -100.0);
+    glVertex3f(10.0, -50.0, -100.0);
+    glPopMatrix();
+
+
+    //garis-garis depan-belakang kiri-kanan
+    glPushMatrix();
+    glColor3f(0, 1, 0.2);
+    glBegin(GL_QUADS);
+    glVertex3f(-100.0, -75.0, 100.0);
+    glVertex3f(-100.0, 75.0, 100.0);
+    glVertex3f(-90.0, 75.0, 100.0);
+    glVertex3f(-90.0, -75.0, 100.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(0, 1, 0.2);
+    glBegin(GL_QUADS);
+    glVertex3f(-100.0 + 40.0, -75.0, 100.0);
+    glVertex3f(-100.0 + 40.0, 75.0, 100.0);
+    glVertex3f(-90.0 + 40.0, 75.0, 100.0);
+    glVertex3f(-90.0 + 40.0, -75.0, 100.0);
+    glPopMatrix();
+
+
+
+    
+
     ground();
     glFlush();
 }
