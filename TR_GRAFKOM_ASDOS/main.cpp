@@ -7,11 +7,11 @@ using namespace std;
 #define TO_RADIANS 3.14/180.0
 
 //  Anggota Kelompok X
-//  Nama (NIM)
-//  Nama (NIM)
-//  Nama (NIM)
-//  Nama (NIM)
-//  Nama (NIM)
+//  Georgio Nicky (672020267)
+//  Ezer Soleiman Junior Ranti (672020139)
+//  Aprillia Tetikay (672020021)
+//  Siska Angeline (672020123)
+//  Julita Veronika Lenda (672020266)
 
 const int width = 1280;
 const int height = 720;
@@ -72,6 +72,30 @@ void pagar_lantai1() {
 void draw() {
     // Mulai tuliskan isi pikiranmu disini
     lantai1();
+    
+    glPushMatrix();
+    glColor3f(1, 0, 0);
+    glTranslatef(0,100,0);
+    glutSolidCube(200);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 0, 0);
+    glTranslatef(0, 250, 0);
+    glutSolidCube(150);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 1, 0);
+    glTranslatef(0, 350, 0);
+    glutSolidTeapot(50.0);
+    glPopMatrix();
+
+    glPushMatrix();
+    glColor3f(1, 1, 0);
+    glTranslatef(0, 750, 0);
+    glutSolidTorus(30.0, 100, 50, 20);
+    glPopMatrix();
 
     /*glPushMatrix();
     glColor3f(1, 0, 0);
