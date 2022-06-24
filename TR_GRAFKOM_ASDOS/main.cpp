@@ -43,7 +43,11 @@ Motion motion = { false,false,false,false,false,false };
 
 
 void init() {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     for (int i = 0; i < 500; i++) {
         posX[i] = ((float(rand()) / float(RAND_MAX)) * (10000 - (-10000))) + -10000;
         posZ[i] = ((float(rand()) / float(RAND_MAX)) * (10000 - (-10000))) + -10000;
@@ -94,7 +98,11 @@ void matahariBulan() {
     glutSolidSphere(300, 20, 20);
     glPopMatrix();
 
+<<<<<<< HEAD
     /* --------------------- bikin ngelaggg
+=======
+    /* --------------------- bikin ngelaggg 
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     //bintang
     glColor3f(1, 1, 1);
     for (int i = 0; i < 500; i++) {
@@ -148,6 +156,7 @@ void objek1(float x, float y, float z, float t, float l, float p) {
     glVertex3f(x - (p / 2), y + t, z - (l / 2));
     glVertex3f(x - (p / 2), y + t, z + (l / 2));
     glVertex3f(x - (p / 2), y, z + (l / 2));
+<<<<<<< HEAD
     glEnd();
 
     glBegin(GL_QUADS); //kanan
@@ -210,16 +219,25 @@ void kotakBisadiPutar(float x, float y, float z, float t, float l, float p, floa
     glVertex3f(x, y + t, z);
     glVertex3f(x - (derajat * p), y + t, z + (derajat * p));
     glVertex3f(x - (derajat * p), y, z + (derajat * p));
+=======
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     glEnd();
 
 
     /*
 
     glBegin(GL_QUADS); //kanan
+<<<<<<< HEAD
     glVertex3f(x - p, y, z);
     glVertex3f(x - p, y + t, z);
     glVertex3f(x - (derajat * p) - p, y + t, z + (derajat * p));
     glVertex3f(x - (derajat * p) - p, y, z + (derajat * p));
+=======
+    glVertex3f(x + (p / 2), y, z - (l / 2));
+    glVertex3f(x + (p / 2), y + t, z - (l / 2));
+    glVertex3f(x + (p / 2), y + t, z + (l / 2));
+    glVertex3f(x + (p / 2), y, z + (l / 2));
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     glEnd();
 
 
@@ -236,10 +254,85 @@ void kotakBisadiPutar(float x, float y, float z, float t, float l, float p, floa
     glVertex3f(x - (p / 2), y + t, z + (l / 2));
     glVertex3f(x + (p / 2), y + t, z + (l / 2));
     glVertex3f(x + (p / 2), y, z + (l / 2));
+<<<<<<< HEAD
+=======
+    glEnd();
+}
+
+void krucut(float x, float y, float z, float sisi, float t, float r) {
+    glBegin(GL_POLYGON);
+    glVertex3f(x, y + t, z);
+    for (int i = 0; i <= sisi; i++) {
+        glVertex3f((r * cos(2 * 3.14159265 * i / sisi)) + x, y, (r * sin(2 * 3.14159265 * i / sisi)) + z);
+    }
+    glEnd();
+    glBegin(GL_POLYGON);
+    for (int i = 0; i < sisi; i++) {
+        glVertex3f((r * cos(2 * 3.14159265 * i / sisi)) + x, y, (r * sin(2 * 3.14159265 * i / sisi)) + z);
+    }
+    glEnd();
+}
+
+
+//masih fail
+void kotakBisadiPutar(float x, float y, float z, float t, float l, float p, float derajat) {
+    glBegin(GL_QUADS); //alas
+    glVertex3f(x , y, z );
+    glVertex3f(x - (derajat * p), y, z + (derajat * p));
+    glVertex3f(x - (derajat * p) - (derajat * l), y, z + (derajat * p) - (derajat * l));
+    glVertex3f(x - (derajat * l), y, z - (derajat * l));
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     glEnd();
     */
 }
 
+<<<<<<< HEAD
+=======
+    
+    glBegin(GL_QUADS); //atas
+    glVertex3f(x , y + t, z );
+    glVertex3f(x - (derajat * p), y + t, z + (derajat * p));
+    glVertex3f(x - (derajat * p) - (derajat * l), y + t, z + (derajat * p) - (derajat * l));
+    glVertex3f(x - (derajat * l), y + t, z - (derajat * l));
+    glEnd();
+
+    
+    glBegin(GL_QUADS); //kiri
+    glVertex3f(x, y, z);
+    glVertex3f(x, y + t, z);
+    glVertex3f(x - (derajat * p), y + t, z + (derajat * p));
+    glVertex3f(x - (derajat * p), y, z + (derajat * p));
+    glEnd();
+
+
+    /*
+
+    glBegin(GL_QUADS); //kanan
+    glVertex3f(x - p, y, z);
+    glVertex3f(x - p, y + t, z);
+    glVertex3f(x - (derajat * p) - p, y + t, z + (derajat * p));
+    glVertex3f(x - (derajat * p) - p, y, z + (derajat * p));
+    glEnd();
+
+
+    
+    glBegin(GL_QUADS); //blkng
+    glVertex3f(x - (p / 2), y, z - (l / 2));
+    glVertex3f(x - (p / 2), y + t, z - (l / 2));
+    glVertex3f(x + (p / 2), y + t, z - (l / 2));
+    glVertex3f(x + (p / 2), y, z - (l / 2));
+    glEnd();
+
+    glBegin(GL_QUADS); //depan
+    glVertex3f(x - (p / 2), y, z + (l / 2));
+    glVertex3f(x - (p / 2), y + t, z + (l / 2));
+    glVertex3f(x + (p / 2), y + t, z + (l / 2));
+    glVertex3f(x + (p / 2), y, z + (l / 2));
+    glEnd();
+    */
+}
+
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
 void ground() {
     glBegin(GL_QUADS);
     glColor4f(0, 0.35, 0.7, 0.6);
@@ -424,13 +517,18 @@ void pintu(float x, float y, float z, float t, float p) {
     glColor3f(0.93, 0.94, 0.95);
     //tutupAtas
     glColor3f(0.46, 0.06, 0.0);
+<<<<<<< HEAD
     objek1(x - p / 4 - 2, y + t * 0.70 + t * 0.15 - 1.5, z, -1, 2.5, p / 2 - 4);
+=======
+    objek1(x - p/4 - 2, y + t * 0.70 + t * 0.15 - 1.5, z, -1, 2.5, p / 2 - 4);
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     objek1(x - p / 4 - 2, y + t * 0.70 - 2, z, p / 2 - 4 + 2, 2.5, 1);
     objek1(x - 4, y + t * 0.70 - 2, z, p / 2 - 4 + 2, 2.5, 1);
 
 
     //buka
     glColor3f(0.76, 0.26, 0.04);
+<<<<<<< HEAD
 
     objek1(x + p / 2, y + 2, z + p / 2 - 9.5, t * 0.70 - 4, p / 2 - 2, 2);//bawah
 
@@ -439,6 +537,16 @@ void pintu(float x, float y, float z, float t, float p) {
     objek1(x + p / 2, y + t * 0.70 + t * 0.15 - 1.5, z + p / 4, -1, p / 2 - 2, 2.5);
     objek1(x + p / 2, y + t * 0.70 - 2, z + p / 2 - 1, p / 2 - 4 + 2, 1, 2.5);
     objek1(x + p / 2, y + t * 0.70 - 2, z + p / 4, p / 2 - 4 + 2, 1, 2.5);
+=======
+    
+    objek1(x + p / 2 , y + 2, z + p / 2 - 9.5, t * 0.70 - 4, p/2 - 2, 2);//bawah
+
+    //bukaAtas
+    glColor3f(0.46, 0.06, 0.0);
+    objek1(x + p / 2, y + t * 0.70 + t * 0.15 - 1.5, z + p/4, -1, p / 2 - 2, 2.5);
+    objek1(x + p / 2, y + t * 0.70 - 2, z + p/2 -1, p / 2 - 4 + 2, 1, 2.5);
+    objek1(x + p / 2, y + t * 0.70 - 2, z + p/4, p / 2 - 4 + 2, 1, 2.5);
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     objek1(x + p / 2, y + t * 0.70 + t * 0.3 - 1.5, z + p / 4, -1, p / 2 - 2, 2.5);
 }
 
@@ -450,7 +558,11 @@ void jendela(float x, float y, float z, float t, float p) {
 
 }
 
+<<<<<<< HEAD
 void pintuEmpatSisi(float x, float y, float z, float tinggi) {
+=======
+void pintuEmpatSisi(float x, float y, float z , float tinggi) {
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     pintu(x, y, z, tinggi, 40); //pintu depan
 
     glPushMatrix(); //pintu kanan
@@ -471,9 +583,15 @@ void pintuEmpatSisi(float x, float y, float z, float tinggi) {
 
 void pohon(float x, float y, float z) {
     glColor3f(0.4, 0.24, 0.13);
+<<<<<<< HEAD
     objek1(x, y, z, 155, 10, 10);
 
     glColor4f(0.2, 0.6, 0.2, 0.9);
+=======
+    objek1(x,y,z,155,10,10);
+
+    glColor4f(0.2, 0.6, 0.2,0.9);
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     objek1(x, y + 50, z, 7, 60, 60);
     objek1(x, y + 60, z, 7, 70, 70);
     objek1(x, y + 70, z, 7, 65, 65);
@@ -492,17 +610,30 @@ void pohon(float x, float y, float z) {
 
 void draw() {
     // Mulai tuliskan isi pikiranmu disini
+<<<<<<< HEAD
 
     //Warna
     //glColor3f(0.32, 0.47, 0.48);  || Atap Lapisan 1
     //glColor3f(0.4, 0.58, 0.59);   || Atap Lapisan 2
     //glColor3f(0.93, 0.94, 0.95);  ||  Tembok
 
+=======
+    
+    //Warna
+    //glColor3f(0.32, 0.47, 0.48);  || Atap Lapisan 1
+    //glColor3f(0.4, 0.58, 0.59);   || Atap Lapisan 2
+    //glColor3f(0.93, 0.94, 0.95);  ||  Tembok
+
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     matahariBulan(); //matahari dan bulan,, bisa bergerak lohh
 
     //pintu lantai ------------------------------------------->
     pintuEmpatSisi(0, 110, 176, 60); //1
+<<<<<<< HEAD
     pintuEmpatSisi(0, 186, 137, 60); //2
+=======
+    pintuEmpatSisi(0, 186, 137,60); //2
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     pintuEmpatSisi(0, 329, 100, 60); //3
     pintuEmpatSisi(0, 435, 100, 60); //4
     //-------------------------------------------------------->
@@ -517,8 +648,13 @@ void draw() {
 
     //dasar
     glColor3f(0.55, 0.55, 0.55);
+<<<<<<< HEAD
     objek2(0, 0, 0, 110, 700, 650);
 
+=======
+    objek2(0, 0, 0, 110, 700,650);
+    
+>>>>>>> 4cdf592ad3ac7ddebae5d9c02d7d808d610a7db4
     //tangga
     tangga(0, 0, 430, 210, 10, 10, 10);
 
